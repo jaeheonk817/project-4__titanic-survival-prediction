@@ -62,6 +62,14 @@ In this modeling phase, we build different classification models and search for 
 - Voting Classifier
 - Stacking Classifier
 
-All of these models will find its best hyperparameters through GridSearchCV. For information on detailed hyperparameters, please refer to the ipynb file. The graph below compares the results of our final models:
+All of these models will find its best hyperparameters through GridSearchCV. For information on detailed hyperparameters, please refer to the ipynb file. The graph below compares the results of our best-tuned models:
 
 ![image](https://user-images.githubusercontent.com/122312679/226452279-a041a0d8-4748-4d35-ba7d-28a4bf068c10.png)
+
+We will select Stacking classifier as our final prediction model, which combined the best-tuned random forest, k-nearest neighbors and xg boost as estimators and used logistic regression as the final model. Its accuracy score of 83.6% on test data is the highest of all models.
+
+## Evaluation
+We will now evaluate what features in our final model are most indicative of the survival outcome.
+
+![image](https://user-images.githubusercontent.com/122312679/226453847-735232e6-3724-4b98-aa9c-8dfa16cacb55.png)
+
