@@ -73,3 +73,35 @@ We will now evaluate what features in our final model are most indicative of the
 
 ![image](https://user-images.githubusercontent.com/122312679/226453847-735232e6-3724-4b98-aa9c-8dfa16cacb55.png)
 
+`who`, which categoriezes boarders into three groups: 'adult male', 'adult female' and `non-adults', seem to play the single most important role in survival prediction. Its magnitude of importance is not even comparable  to other features. Lets look closer to how it affected the survival.
+
+![image](https://user-images.githubusercontent.com/122312679/226464330-bf1896d9-f55c-47d9-8614-3692b4891a6d.png)
+
+Men survived at significantly lower rate than did women or children. 
+Next important feature was the ticket class for each person.
+
+![image](https://user-images.githubusercontent.com/122312679/226465021-3ad54c48-50dc-4407-b7b2-b560e60ad0da.png)
+
+The class was the only ordinal data we had, and higher classes are associated with higher survival chances.
+We then combine the information from both of these columns to creat a visual presentation of survival chances.
+
+![image](https://user-images.githubusercontent.com/122312679/226465281-e446a2fc-fa39-4fd1-86d1-e3a0015fb141.png)
+
+The survival rates for people in good groups for both categories (i.e. first class women) is unbelievably better than someone in bad groups for both categories (i.e. third class men). Being in the first class was a gamechanger for men, but not among children.
+
+![image](https://user-images.githubusercontent.com/122312679/226465742-4d8bb4f8-2546-4e2c-901c-c55a2e837e5c.png)
+`Fare` was another important feature in determining survival. Higher fares were associated with higher survival chances but it's redundant in a sense that higher fares would equate to higher ticket classes. For all men, women and children the scatter dots show more orange colors as they go up along the y-axis.
+
+## Conclusion
+In conclusion, this Titanic project aimed to predict the survival of passengers based on various features such as age, gender, class, and fare. After performing exploratory data analysis, feature engineering, and model selection, the final model achieved an accuracy of 83.6% on the test dataset. This indicates that the model can predict the survival of passengers with a high level of accuracy, which can be useful in real-world scenarios.
+
+Several factors were found to be important predictors of survival, including gender, age, and class. Females had a significantly higher chance of survival compared to males, while younger passengers had a higher chance of survival than older passengers. Passengers in the first and second class had a higher chance of survival compared to those in the third class.
+
+Overall, this project highlights the importance of careful data preparation, feature engineering, and model selection in improving the accuracy of machine learning models. The high accuracy achieved in this project suggests that the selected features and model algorithms were effective in predicting survival, and could potentially be used in real-world scenarios to assist in disaster response planning or other related applications.
+
+## Next Steps
+More data: We can definitely get more data on person-specific information such as: finding their suffices, education level, past ocean travel history, etc.
+Given more time, we can always try different combinations of models with different hyperparameters.
+
+
+We will select Stacking classifier as our final prediction model, which combined the best-tuned random forest, k-nearest neighbors and xg boost as estimators and used logistic regression as the final model. Its accuracy score of 83.6% on test data is the highest of all models.
