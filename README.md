@@ -90,6 +90,7 @@ We then combine the information from both of these columns to creat a visual pre
 The survival rates for people in good groups for both categories (i.e. first class women) is unbelievably better than someone in bad groups for both categories (i.e. third class men). Being in the first class was a gamechanger for men, but not among children.
 
 ![image](https://user-images.githubusercontent.com/122312679/226465742-4d8bb4f8-2546-4e2c-901c-c55a2e837e5c.png)
+
 `Fare` was another important feature in determining survival. Higher fares were associated with higher survival chances but it's redundant in a sense that higher fares would equate to higher ticket classes. For all men, women and children the scatter dots show more orange colors as they go up along the y-axis.
 
 ## Conclusion
